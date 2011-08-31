@@ -1,0 +1,4 @@
+name = "topfilter"
+description = "Selection of the top N elements from a stream"
+archive(byte) = "topfilter.cma"
+archive(native) = "topfilter.cmxa"

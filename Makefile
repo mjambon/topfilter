@@ -2,12 +2,12 @@
 default: all opt
 all:
 	ocamlc -c topscore.mli
-	ocamlc -c topscore.ml
-	ocamlc -a -o topfilter.cma topscore.cmo
+	ocamlc -c -g topscore.ml
+	ocamlc -a -g -o topfilter.cma topscore.cmo
 opt:
 	ocamlc -c topscore.mli
-	ocamlopt -c topscore.ml
-	ocamlopt -a -o topfilter.cmxa topscore.cmx
+	ocamlopt -c -g topscore.ml
+	ocamlopt -a -g -o topfilter.cmxa topscore.cmx
 doc:
 	mkdir -p html
 	ocamldoc -html -d html topscore.mli
@@ -17,5 +17,5 @@ install:
 uninstall:
 	ocamlfind remove topfilter
 clean:
-	rm -f *.cm[ioxa] *.o *.cmxa *~
+	rm -f *.cm[ioxa] *.o *.cmxa *.a *~
 	rm -rf html

@@ -1,4 +1,5 @@
 name = "topfilter"
+version = "1.0.0"
 description = "Selection of the top N elements from a stream"
 archive(byte) = "topfilter.cma"
 archive(native) = "topfilter.cmxa"
